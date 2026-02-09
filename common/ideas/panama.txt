@@ -1,0 +1,18 @@
+ideas = {
+
+	country = {
+		PAN_no_standing_army = {
+        picture = GFX_idea_PAN_no_standing_army
+
+        allowed = { always = yes }
+        visible = { always = yes }
+
+        modifier = {
+            recruitable_population_factor = -0.30
+            division_training_time = 0.25
+            land_doctrine_cost_factor = 0.25
+        	}
+    	}
+	}
+
+}

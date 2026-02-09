@@ -10258,7 +10258,6 @@ spriteType = {
 		name = "GFX_goal_TON_coa_airforce"
 		textureFile = "gfx/interface/goals/ton/r56_goal_TON_coa_airforce.dds"
 	}
-
 }
 
 

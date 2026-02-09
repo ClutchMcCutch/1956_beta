@@ -2973,5 +2973,12 @@ spriteType = {
 		texturefile = "gfx/interface/ideas/sam/r56_idea_SAM_divided_samoa.dds"
 	}
 
+	###------> PAN <><> <><> <><> <><> <><>
+
+	spriteType = {
+		name = "GFX_idea_PAN_no_standing_army"
+		texturefile = "gfx/interface/ideas/pan/r56_idea_PAN_no_standing_army.dds"
+	}
+
 }
 #####---------------------------------------------------------------------> End

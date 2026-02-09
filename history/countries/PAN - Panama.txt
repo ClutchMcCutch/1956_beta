@@ -17,6 +17,7 @@ set_technology = {
 
 add_ideas = { # Military abolished in 1904, National Police maintained as main combat force
 	disarmed_nation
+	PAN_no_standing_army
 }
 
 set_country_flag = monroe_doctrine

@@ -1,0 +1,734 @@
+focus_tree = {
+	id = PAN_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PAN
+		}
+	}
+
+	default = no
+
+	reset_on_civilwar = no
+	shared_focus = GCO_UNIFIED_gran_colombian_unification
+	shared_focus = ABC_establish_a_general_staff
+	shared_focus = GEN_Aviation_Effort
+    shared_focus = GEN_Naval_Effort
+	continuous_focus_position = { x = 50 y = 1100 }
+
+	focus = {
+		id = PAN_legacy_of_harmido_arias_madrid
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		#relative_position_id = PAR_fedrerista_land_reforms 
+		icon = GFX_focus_generic_befriend_usa
+		x = 45
+		y = 0
+		# mutually_exclusive = { focus = PAR_fedrerista_land_reforms }
+		cost = 1
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_voice_anti_us_concerns
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_legacy_of_harmido_arias_madrid
+		icon = GFX_focus_generic_befriend_usa
+		x = -2	
+		y = 1
+		# mutually_exclusive = { focus = PAR_fedrerista_land_reforms }
+		cost = 4
+		prerequisite = { focus = PAN_legacy_of_harmido_arias_madrid }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_a_popular_president
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_legacy_of_harmido_arias_madrid
+		icon = GFX_focus_generic_befriend_usa
+		x = 2	
+		y = 1
+		# mutually_exclusive = { focus = PAR_fedrerista_land_reforms }
+		cost = 4
+		prerequisite = { focus = PAN_legacy_of_harmido_arias_madrid }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_hull_alfaro_treaty
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_legacy_of_harmido_arias_madrid
+		icon = GFX_focus_generic_befriend_usa
+		x = 0	
+		y = 2
+		# mutually_exclusive = { focus = PAR_fedrerista_land_reforms }
+		cost = 5
+		prerequisite = { focus = PAN_a_popular_president }
+		prerequisite = { focus = PAN_voice_anti_us_concerns }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_abide_by_constitution
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_legacy_of_harmido_arias_madrid
+		icon = GFX_focus_generic_befriend_usa
+		mutually_exclusive = {
+			focus = PAN_rewrite_the_constitution
+		}
+		x = -5	
+		y = 3
+		cost = 5
+		prerequisite = { focus = PAN_hull_alfaro_treaty }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_rewrite_the_constitution
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_legacy_of_harmido_arias_madrid
+		mutually_exclusive = {
+			focus = PAN_abide_by_constitution
+		}
+		icon = GFX_focus_generic_befriend_usa
+		x = 5	
+		y = 3
+		cost = 5
+		prerequisite = { focus = PAN_hull_alfaro_treaty }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_wins
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_legacy_of_harmido_arias_madrid
+		icon = GFX_focus_generic_befriend_usa
+		x = 0
+		y = 4
+		cost = 1
+		prerequisite = { focus = PAN_rewrite_the_constitution focus = PAN_abide_by_constitution }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_domingo_wins
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_legacy_of_harmido_arias_madrid
+		icon = GFX_focus_generic_befriend_usa
+		x = -12
+		y = 4
+		cost = 1
+		prerequisite = { focus = PAN_abide_by_constitution }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_harmido_wins
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_legacy_of_harmido_arias_madrid
+		icon = GFX_focus_generic_befriend_usa
+		x = 12
+		y = 4
+		cost = 1
+		prerequisite = { focus = PAN_rewrite_the_constitution }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+	#harmido wins path
+	focus = {
+		id = PAN_combat_corruption
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_harmido_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = -4
+		y = 1
+		cost = 5
+		prerequisite = { focus = PAN_harmido_wins }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_reduce_police_influence
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_combat_corruption
+		icon = GFX_focus_generic_befriend_usa
+		x = -3
+		y = 1
+		cost = 5
+		prerequisite = { focus = PAN_combat_corruption }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_emergency_measures
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_combat_corruption
+		icon = GFX_focus_generic_befriend_usa
+		x = 3
+		y = 1
+		cost = 5
+		prerequisite = { focus = PAN_combat_corruption }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_stabilize_the_republic
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_combat_corruption
+		icon = GFX_focus_generic_befriend_usa
+		x = 1
+		y = 2
+		cost = 5
+		prerequisite = { focus = PAN_emergency_measures }
+		prerequisite = { focus = PAN_purge_corrupt_elites }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_defend_the_isthmus
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_combat_corruption
+		icon = GFX_focus_generic_befriend_usa
+		x = 5
+		y = 2
+		cost = 5
+		prerequisite = { focus = PAN_emergency_measures }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_assume_regional_responsibility
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_combat_corruption
+		icon = GFX_focus_generic_befriend_usa
+		x = 3
+		y = 3
+		cost = 5
+		prerequisite = { focus = PAN_stabilize_the_republic }
+		prerequisite = { focus = PAN_defend_the_isthmus }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_la_republica_afirmada
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_combat_corruption
+		icon = GFX_focus_generic_befriend_usa
+		x = 0
+		y = 4
+		cost = 10
+		prerequisite = { focus = PAN_assume_regional_responsibility }
+		prerequisite = { focus = PAN_authority_of_the_Republic }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_invest_in_the_military
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_combat_corruption
+		icon = GFX_focus_generic_befriend_usa
+		x = -5
+		y = 2
+		cost = 5
+		prerequisite = { focus = PAN_reduce_police_influence }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_professionalize_the_state
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_combat_corruption
+		icon = GFX_focus_generic_befriend_usa
+		x = -1
+		y = 2
+		cost = 5
+		prerequisite = { focus = PAN_reduce_police_influence }
+		prerequisite = { focus = PAN_purge_corrupt_elites }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_authority_of_the_Republic
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_combat_corruption
+		icon = GFX_focus_generic_befriend_usa
+		x = -3
+		y = 3
+		cost = 5
+		prerequisite = { focus = PAN_professionalize_the_state }
+		prerequisite = { focus = PAN_invest_in_the_military }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_purge_corrupt_elites
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_combat_corruption
+		icon = GFX_focus_generic_befriend_usa
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = PAN_combat_corruption }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_central_american_confrence
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_harmido_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = 4
+		y = 1
+		cost = 5
+		prerequisite = { focus = PAN_harmido_wins }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_a_common_enemy
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_central_american_confrence
+		icon = GFX_focus_generic_befriend_usa
+		x = -2
+		y = 1
+		cost = 5
+		prerequisite = { focus = PAN_central_american_confrence }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_a_collective_security_pact
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_central_american_confrence
+		icon = GFX_focus_generic_befriend_usa
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = PAN_central_american_confrence }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_propose_united_central_america
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_central_american_confrence
+		icon = GFX_focus_generic_befriend_usa
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = PAN_a_common_enemy }
+		prerequisite = { focus = PAN_a_collective_security_pact }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	
+}
+
