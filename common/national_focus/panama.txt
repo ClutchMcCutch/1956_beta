@@ -36,8 +36,8 @@ focus_tree = {
 		}
 		#relative_position_id = PAR_fedrerista_land_reforms 
 		icon = GFX_focus_generic_befriend_usa
-		x = 45
-		y = 0
+		x = 47
+		y = 2
 		# mutually_exclusive = { focus = PAR_fedrerista_land_reforms }
 		cost = 1
 		search_filters = {  }
@@ -249,7 +249,7 @@ focus_tree = {
 		}
 		relative_position_id = PAN_legacy_of_harmido_arias_madrid
 		icon = GFX_focus_generic_befriend_usa
-		x = -12
+		x = -13
 		y = 4
 		cost = 1
 		prerequisite = { focus = PAN_abide_by_constitution }
@@ -278,7 +278,7 @@ focus_tree = {
 		}
 		relative_position_id = PAN_legacy_of_harmido_arias_madrid
 		icon = GFX_focus_generic_befriend_usa
-		x = 12
+		x = 13
 		y = 4
 		cost = 1
 		prerequisite = { focus = PAN_rewrite_the_constitution }
@@ -307,7 +307,7 @@ focus_tree = {
 		}
 		relative_position_id = PAN_harmido_wins
 		icon = GFX_focus_generic_befriend_usa
-		x = -4
+		x = -5
 		y = 1
 		cost = 5
 		prerequisite = { focus = PAN_harmido_wins }
@@ -631,7 +631,7 @@ focus_tree = {
 		}
 		relative_position_id = PAN_harmido_wins
 		icon = GFX_focus_generic_befriend_usa
-		x = 4
+		x = 5
 		y = 1
 		cost = 5
 		prerequisite = { focus = PAN_harmido_wins }
@@ -723,6 +723,35 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = PAN_a_common_enemy }
 		prerequisite = { focus = PAN_a_collective_security_pact }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_collaborative_research
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_central_american_confrence
+		icon = GFX_focus_generic_befriend_usa
+		x = -3
+		y = 3
+		cost = 10
+		prerequisite = { focus = PAN_propose_united_central_america }
 		search_filters = {  }
 		completion_reward = {
 			
