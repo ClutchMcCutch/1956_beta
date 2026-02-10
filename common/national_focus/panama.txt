@@ -758,6 +758,123 @@ focus_tree = {
 		}
 	}
 
-	
+	focus = {
+		id = PAN_tratado_comercial_centroamericano
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_central_american_confrence
+		icon = GFX_focus_generic_befriend_usa
+		x = 0
+		y = 3
+		cost = 10
+		prerequisite = { focus = PAN_propose_united_central_america }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_strategic_rearment
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_central_american_confrence
+		icon = GFX_focus_generic_befriend_usa
+		x = 3
+		y = 3
+		cost = 10
+		prerequisite = { focus = PAN_propose_united_central_america }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_reclaim_central_america
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_central_american_confrence
+		icon = GFX_focus_generic_befriend_usa
+		x = 0
+		y = 4
+		cost = 10
+		prerequisite = { focus = PAN_strategic_rearment }
+		prerequisite = { focus = PAN_collaborative_research }
+		prerequisite = { focus = PAN_tratado_comercial_centroamericano }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_the_end_of_imperialism
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_harmido_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = 0
+		y = 6
+		cost = 10
+		prerequisite = { focus = PAN_reclaim_central_america}
+		prerequisite = { focus = PAN_la_republica_afirmada}
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
 }
 
