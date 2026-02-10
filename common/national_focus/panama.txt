@@ -36,8 +36,8 @@ focus_tree = {
 		}
 		#relative_position_id = PAR_fedrerista_land_reforms 
 		icon = GFX_focus_generic_befriend_usa
-		x = 47
-		y = 2
+		x = 44
+		y = 4
 		# mutually_exclusive = { focus = PAR_fedrerista_land_reforms }
 		cost = 1
 		search_filters = {  }
@@ -200,7 +200,7 @@ focus_tree = {
 			
 		}
 	}
-
+	#juan wins path
 	focus = {
 		id = PAN_juan_wins
 		available = {
@@ -229,7 +229,7 @@ focus_tree = {
 			
 		}
 	}
-
+	#domingo wins path
 	focus = {
 		id = PAN_domingo_wins
 		available = {
@@ -249,7 +249,7 @@ focus_tree = {
 		}
 		relative_position_id = PAN_legacy_of_harmido_arias_madrid
 		icon = GFX_focus_generic_befriend_usa
-		x = -13
+		x = -20
 		y = 4
 		cost = 1
 		prerequisite = { focus = PAN_abide_by_constitution }
@@ -258,7 +258,7 @@ focus_tree = {
 			
 		}
 	}
-
+	#harmido wins path
 	focus = {
 		id = PAN_harmido_wins
 		available = {
@@ -278,7 +278,7 @@ focus_tree = {
 		}
 		relative_position_id = PAN_legacy_of_harmido_arias_madrid
 		icon = GFX_focus_generic_befriend_usa
-		x = 13
+		x = 20
 		y = 4
 		cost = 1
 		prerequisite = { focus = PAN_rewrite_the_constitution }
@@ -287,7 +287,7 @@ focus_tree = {
 			
 		}
 	}
-	#harmido wins path
+	
 	focus = {
 		id = PAN_combat_corruption
 		available = {
