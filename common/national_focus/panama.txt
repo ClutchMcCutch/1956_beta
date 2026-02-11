@@ -258,6 +258,502 @@ focus_tree = {
 			
 		}
 	}
+
+	focus = {
+		id = PAN_juan_two
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = 0
+		y = 2
+		cost = 1
+		prerequisite = { focus = PAN_address_the_nation }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_three
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = -4
+		y = 2
+		cost = 1
+		prerequisite = { focus = PAN_address_the_nation }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_four
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = 4
+		y = 2
+		cost = 1
+		prerequisite = { focus = PAN_address_the_nation }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_five
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = 6
+		y = 3
+		cost = 1
+		prerequisite = { focus = PAN_juan_four }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_six
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = -6
+		y = 3
+		cost = 1
+		prerequisite = { focus = PAN_juan_three }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = PAN_juan_seven
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = 0
+		y = 3
+		cost = 1
+		prerequisite = { focus = PAN_juan_two }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_eight
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = -2
+		y = 3
+		cost = 1
+		prerequisite = { focus = PAN_juan_two }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_nine
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = 2
+		y = 3
+		cost = 1
+		prerequisite = { focus = PAN_juan_two }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_ten
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = -4
+		y = 4
+		cost = 1
+		prerequisite = { focus = PAN_juan_six }
+		prerequisite = { focus = PAN_juan_eight }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_eleven
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = 4
+		y = 4
+		cost = 1
+		prerequisite = { focus = PAN_juan_nine }
+		prerequisite = { focus = PAN_juan_five }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_twelve
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = 0
+		y = 5
+		cost = 1
+		prerequisite = { focus = PAN_juan_ten }
+		prerequisite = { focus = PAN_juan_eleven }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_thirteen
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = -4
+		y = 6
+		cost = 1
+		prerequisite = { focus = PAN_juan_twelve }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_fourteen
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = 4
+		y = 6
+		cost = 1
+		prerequisite = { focus = PAN_juan_twelve }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_fifteen
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = 6
+		y = 7
+		cost = 1
+		prerequisite = { focus = PAN_juan_fourteen }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_sixteen
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = 2
+		y = 7
+		cost = 1
+		prerequisite = { focus = PAN_juan_fourteen }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_seventeen
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = -2
+		y = 7
+		cost = 1
+		prerequisite = { focus = PAN_juan_thirteen }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_juan_eighteen
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_juan_wins
+		icon = GFX_focus_generic_befriend_usa
+		x = -6
+		y = 7
+		cost = 1
+		prerequisite = { focus = PAN_juan_thirteen }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
 	#domingo wins path
 	focus = {
 		id = PAN_domingo_wins
