@@ -376,7 +376,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PAN_juan_six
+		id = PAN_initiate_the_welfare_state
 		available = {
 			if = {
 				limit = {
@@ -434,7 +434,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PAN_juan_eight
+		id = PAN_invite_american_investments
 		available = {
 			if = {
 				limit = {
@@ -463,7 +463,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PAN_juan_nine
+		id = PAN_technology_sharing
 		available = {
 			if = {
 				limit = {
@@ -492,7 +492,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PAN_juan_ten
+		id = PAN_gateway_of_the_americas
 		available = {
 			if = {
 				limit = {
@@ -513,8 +513,8 @@ focus_tree = {
 		x = -4
 		y = 4
 		cost = 1
-		prerequisite = { focus = PAN_juan_six }
-		prerequisite = { focus = PAN_juan_eight }
+		prerequisite = { focus = PAN_initiate_the_welfare_state }
+		prerequisite = { focus = PAN_invite_american_investments }
 		search_filters = {  }
 		completion_reward = {
 			
@@ -522,7 +522,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PAN_juan_eleven
+		id = PAN_the_panamanian_renaissance
 		available = {
 			if = {
 				limit = {
@@ -543,7 +543,7 @@ focus_tree = {
 		x = 4
 		y = 4
 		cost = 1
-		prerequisite = { focus = PAN_juan_nine }
+		prerequisite = { focus = PAN_technology_sharing }
 		prerequisite = { focus = PAN_young_scientists }
 		search_filters = {  }
 		completion_reward = {
@@ -552,7 +552,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PAN_juan_twelve
+		id = PAN_a_new_panama
 		available = {
 			if = {
 				limit = {
@@ -573,8 +573,8 @@ focus_tree = {
 		x = 0
 		y = 5
 		cost = 1
-		prerequisite = { focus = PAN_juan_ten }
-		prerequisite = { focus = PAN_juan_eleven }
+		prerequisite = { focus = PAN_the_panamanian_renaissance }
+		prerequisite = { focus = PAN_gateway_of_the_americas }
 		search_filters = {  }
 		completion_reward = {
 			
@@ -582,7 +582,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PAN_juan_thirteen
+		id = PAN_define_our_global_position
 		available = {
 			if = {
 				limit = {
@@ -603,7 +603,7 @@ focus_tree = {
 		x = -3
 		y = 6
 		cost = 1
-		prerequisite = { focus = PAN_juan_twelve }
+		prerequisite = { focus = PAN_a_new_panama }
 		search_filters = {  }
 		completion_reward = {
 			
@@ -632,7 +632,7 @@ focus_tree = {
 		x = 3
 		y = 6
 		cost = 1
-		prerequisite = { focus = PAN_juan_twelve }
+		prerequisite = { focus = PAN_a_new_panama }
 		search_filters = {  }
 		completion_reward = {
 			
@@ -698,7 +698,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PAN_juan_seventeen
+		id = PAN_join_the_allies
 		available = {
 			if = {
 				limit = {
@@ -716,10 +716,11 @@ focus_tree = {
 		}
 		relative_position_id = PAN_juan_wins
 		icon = GFX_focus_generic_befriend_usa
+		mutually_exclusive = { focus = PAN_american_defense_council } 
 		x = -1
 		y = 7
 		cost = 1
-		prerequisite = { focus = PAN_juan_thirteen }
+		prerequisite = { focus = PAN_define_our_global_position }
 		search_filters = {  }
 		completion_reward = {
 			
@@ -727,7 +728,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PAN_juan_eighteen
+		id = PAN_american_defense_council
 		available = {
 			if = {
 				limit = {
@@ -745,10 +746,11 @@ focus_tree = {
 		}
 		relative_position_id = PAN_juan_wins
 		icon = GFX_focus_generic_befriend_usa
+		mutually_exclusive = { focus = PAN_join_the_allies}
 		x = -5
 		y = 7
 		cost = 1
-		prerequisite = { focus = PAN_juan_thirteen }
+		prerequisite = { focus = PAN_define_our_global_position }
 		search_filters = {  }
 		completion_reward = {
 			
