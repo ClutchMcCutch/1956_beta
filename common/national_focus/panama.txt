@@ -260,7 +260,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PAN_juan_two
+		id = PAN_meet_with_roosevelt
 		available = {
 			if = {
 				limit = {
@@ -289,7 +289,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PAN_juan_three
+		id = PAN_healthcare_reform
 		available = {
 			if = {
 				limit = {
@@ -318,7 +318,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PAN_juan_four
+		id = PAN_children_of_panama
 		available = {
 			if = {
 				limit = {
@@ -347,7 +347,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PAN_juan_five
+		id = PAN_young_scientists
 		available = {
 			if = {
 				limit = {
@@ -368,7 +368,7 @@ focus_tree = {
 		x = 6
 		y = 3
 		cost = 1
-		prerequisite = { focus = PAN_juan_four }
+		prerequisite = { focus = PAN_children_of_panama }
 		search_filters = {  }
 		completion_reward = {
 			
@@ -397,7 +397,7 @@ focus_tree = {
 		x = -6
 		y = 3
 		cost = 1
-		prerequisite = { focus = PAN_juan_three }
+		prerequisite = { focus = PAN_healthcare_reform }
 		search_filters = {  }
 		completion_reward = {
 			
@@ -405,7 +405,7 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = PAN_juan_seven
+		id = PAN_develop_natural_resources
 		available = {
 			if = {
 				limit = {
@@ -426,7 +426,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		cost = 1
-		prerequisite = { focus = PAN_juan_two }
+		prerequisite = { focus = PAN_meet_with_roosevelt }
 		search_filters = {  }
 		completion_reward = {
 			
@@ -455,7 +455,7 @@ focus_tree = {
 		x = -2
 		y = 3
 		cost = 1
-		prerequisite = { focus = PAN_juan_two }
+		prerequisite = { focus = PAN_meet_with_roosevelt }
 		search_filters = {  }
 		completion_reward = {
 			
@@ -484,7 +484,7 @@ focus_tree = {
 		x = 2
 		y = 3
 		cost = 1
-		prerequisite = { focus = PAN_juan_two }
+		prerequisite = { focus = PAN_meet_with_roosevelt }
 		search_filters = {  }
 		completion_reward = {
 			
@@ -544,7 +544,7 @@ focus_tree = {
 		y = 4
 		cost = 1
 		prerequisite = { focus = PAN_juan_nine }
-		prerequisite = { focus = PAN_juan_five }
+		prerequisite = { focus = PAN_young_scientists }
 		search_filters = {  }
 		completion_reward = {
 			
@@ -600,7 +600,7 @@ focus_tree = {
 		}
 		relative_position_id = PAN_juan_wins
 		icon = GFX_focus_generic_befriend_usa
-		x = -4
+		x = -3
 		y = 6
 		cost = 1
 		prerequisite = { focus = PAN_juan_twelve }
@@ -629,7 +629,7 @@ focus_tree = {
 		}
 		relative_position_id = PAN_juan_wins
 		icon = GFX_focus_generic_befriend_usa
-		x = 4
+		x = 3
 		y = 6
 		cost = 1
 		prerequisite = { focus = PAN_juan_twelve }
@@ -658,7 +658,7 @@ focus_tree = {
 		}
 		relative_position_id = PAN_juan_wins
 		icon = GFX_focus_generic_befriend_usa
-		x = 6
+		x = 5
 		y = 7
 		cost = 1
 		prerequisite = { focus = PAN_juan_fourteen }
@@ -687,7 +687,7 @@ focus_tree = {
 		}
 		relative_position_id = PAN_juan_wins
 		icon = GFX_focus_generic_befriend_usa
-		x = 2
+		x = 1
 		y = 7
 		cost = 1
 		prerequisite = { focus = PAN_juan_fourteen }
@@ -716,7 +716,7 @@ focus_tree = {
 		}
 		relative_position_id = PAN_juan_wins
 		icon = GFX_focus_generic_befriend_usa
-		x = -2
+		x = -1
 		y = 7
 		cost = 1
 		prerequisite = { focus = PAN_juan_thirteen }
@@ -745,7 +745,7 @@ focus_tree = {
 		}
 		relative_position_id = PAN_juan_wins
 		icon = GFX_focus_generic_befriend_usa
-		x = -6
+		x = -5
 		y = 7
 		cost = 1
 		prerequisite = { focus = PAN_juan_thirteen }
