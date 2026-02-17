@@ -1374,5 +1374,329 @@ focus_tree = {
 			
 		}
 	}
+	#Harmido authoritarian/un-aligned path
+	focus = {
+		id = PAN_crisis_at_the_canal
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		#relative_position_id = PAR_fedrerista_land_reforms 
+		icon = GFX_focus_generic_befriend_usa
+		x = 70
+		y = 0
+		cost = 5
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_cancel_elections
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_crisis_at_the_canal
+		icon = GFX_focus_generic_befriend_usa
+		x = -2
+		y = 1
+		cost = 5
+		prerequisite = { focus = PAN_crisis_at_the_canal }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_consolidate_power
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_crisis_at_the_canal
+		icon = GFX_focus_generic_befriend_usa
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = PAN_crisis_at_the_canal }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_raise_our_army
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_crisis_at_the_canal
+		icon = GFX_focus_generic_befriend_usa
+		x = 3
+		y = 2
+		cost = 5
+		prerequisite = { focus = PAN_cancel_elections }
+		prerequisite = { focus = PAN_consolidate_power }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_produce_our_own_arms
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_crisis_at_the_canal
+		icon = GFX_focus_generic_befriend_usa
+		x = 0
+		y = 2
+		cost = 5
+		prerequisite = { focus = PAN_cancel_elections }
+		prerequisite = { focus = PAN_consolidate_power }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_seek_foreign_aid
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_crisis_at_the_canal
+		icon = GFX_focus_generic_befriend_usa
+		x = -3
+		y = 2
+		cost = 5
+		prerequisite = { focus = PAN_cancel_elections }
+		prerequisite = { focus = PAN_consolidate_power }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_cult_of_personality
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_crisis_at_the_canal
+		icon = GFX_focus_generic_befriend_usa
+		x = -2
+		y = 3
+		cost = 5
+		prerequisite = { focus = PAN_seek_foreign_aid }
+		prerequisite = { focus = PAN_produce_our_own_arms }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_anti_american_propaganda
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_crisis_at_the_canal
+		icon = GFX_focus_generic_befriend_usa
+		x = 2
+		y = 3
+		cost = 5
+		prerequisite = { focus = PAN_raise_our_army }
+		prerequisite = { focus = PAN_produce_our_own_arms }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_the_savior_of_panama
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_crisis_at_the_canal
+		icon = GFX_focus_generic_befriend_usa
+		x = 0
+		y = 4
+		cost = 10
+		prerequisite = { focus = PAN_anti_american_propaganda }
+		prerequisite = { focus = PAN_cult_of_personality }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_take_back_the_canal
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_the_savior_of_panama
+		icon = GFX_focus_generic_befriend_usa
+		x = -3
+		y = 1
+		cost = 10
+		prerequisite = { focus = PAN_the_savior_of_panama }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_united_we_stand
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_the_savior_of_panama
+		icon = GFX_focus_generic_befriend_usa
+		x = 3
+		y = 1
+		cost = 10
+		prerequisite = { focus = PAN_the_savior_of_panama }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
 }
 
