@@ -18,6 +18,7 @@ set_technology = {
 add_ideas = { # Military abolished in 1904, National Police maintained as main combat force
 	disarmed_nation
 	PAN_no_standing_army
+	PAN_economic_recovery
 }
 
 set_country_flag = monroe_doctrine
@@ -76,6 +77,11 @@ set_popularities = {
 	neutrality = 6
 	fascism = 12
 	communism = 8
+}
+
+add_opinion_modifier = {
+	target = USA
+	modifier = american_distrust
 }
 
 #create_corps_commander = { 

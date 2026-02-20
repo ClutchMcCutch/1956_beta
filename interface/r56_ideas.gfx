@@ -2980,5 +2980,10 @@ spriteType = {
 		texturefile = "gfx/interface/ideas/pan/r56_idea_PAN_no_standing_army.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_PAN_economic_recovery"
+		texturefile = "gfx/interface/ideas/pan/r56_idea_PAN_economic_recovery.dds"
+	}
+
 }
 #####---------------------------------------------------------------------> End

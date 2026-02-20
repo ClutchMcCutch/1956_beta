@@ -1660,7 +1660,7 @@ focus_tree = {
 		}
 		relative_position_id = PAN_the_savior_of_panama
 		icon = GFX_focus_generic_befriend_usa
-		x = -2
+		x = 0
 		y = 1
 		cost = 10
 		prerequisite = { focus = PAN_the_savior_of_panama }
@@ -1690,9 +1690,9 @@ focus_tree = {
 		relative_position_id = PAN_the_savior_of_panama
 		icon = GFX_focus_generic_befriend_usa
 		x = 2
-		y = 1
+		y = 2
 		cost = 10
-		prerequisite = { focus = PAN_the_savior_of_panama }
+		prerequisite = { focus = PAN_take_back_the_canal }
 		search_filters = {  }
 		completion_reward = {
 			
@@ -1719,9 +1719,38 @@ focus_tree = {
 		relative_position_id = PAN_the_savior_of_panama
 		icon = GFX_focus_generic_befriend_usa
 		x = 2
-		y = 2
+		y = 3
 		cost = 10
 		prerequisite = { focus = PAN_unify_by_force }
+		search_filters = {  }
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = PAN_extract_resources
+		available = {
+			if = {
+				limit = {
+					has_civil_war = no
+				}
+			}
+			else = {
+				has_civil_war = yes
+				NOT = { has_war_with = USA }
+			}
+		}
+
+		bypass = {
+			
+		}
+		relative_position_id = PAN_the_savior_of_panama
+		icon = GFX_focus_generic_befriend_usa
+		x = 3
+		y = 4
+		cost = 10
+		prerequisite = { focus = PAN_rebuild_central_america }
 		search_filters = {  }
 		completion_reward = {
 			

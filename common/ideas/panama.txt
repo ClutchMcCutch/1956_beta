@@ -13,6 +13,20 @@ ideas = {
             land_doctrine_cost_factor = 0.25
         	}
     	}
+
+        PAN_economic_recovery = {
+        picture = GFX_idea_PAN_economic_recovery
+
+        allowed = { always = yes }
+        visible = { always = yes }
+
+        modifier = {
+            stability_factor = -0.1
+            consumer_goods_factor = 0.15
+            production_factory_efficiency_gain_factor = -0.15
+            factory_output_factor = -0.15
+        	}
+    	}
 	}
 
 }

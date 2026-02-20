@@ -873,7 +873,11 @@ opinion_modifiers = {
 	POR_greedy = {
 		value = -70
 	}
-	
+
+###------> PAN <><> <><> <><> <><> <><>
+
+	american_distrust = { value = -80 }
+
 ###------> PRC <><> <><> <><> <><> <><>
 	
 	industrial_assistance = { value = 50 }
