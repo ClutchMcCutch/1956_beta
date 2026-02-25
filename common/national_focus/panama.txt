@@ -11,12 +11,688 @@ focus_tree = {
 	default = no
 
 	reset_on_civilwar = no
-	shared_focus = GCO_UNIFIED_gran_colombian_unification
 	shared_focus = ABC_establish_a_general_staff
 	shared_focus = GEN_Aviation_Effort
     shared_focus = GEN_Naval_Effort
 	continuous_focus_position = { x = 50 y = 1100 }
 
+	
+	### INDUSTRY PATH ###
+	focus = {
+		id = PAN_industrial_modernization
+		icon = GFX_goal_generic_production
+		relative_position_id = BUL_crush_the_military_union
+		x = 15
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 45
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = BUL_industrial_modernization
+				bonus = 1
+				uses = 2
+				category = industry
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = PAN_post_depression_economic_recovery
+		icon = GFX_goal_generic_economics_reform
+		prerequisite = { focus = PAN_industrial_modernization }
+		relative_position_id = PAN_industrial_modernization
+		x = -3
+		y = 1
+		cost = 7.15
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+		  NOT = {
+			  has_idea = BUL_great_depression3
+			}
+		}
+
+		completion_reward = {
+		random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				  type = industrial_complex
+				  level = 2
+				  instant_build = yes
+			  }
+		  }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+  }
+
+	focus = {
+		id = PAN_two_year_railway_plan
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = PAN_post_depression_economic_recovery }
+		relative_position_id = PAN_post_depression_economic_recovery
+		x = -1
+		y = 1
+		cost = 7.15
+
+		ai_will_do = {
+			factor = 45
+		}
+
+
+
+		completion_reward = {
+		add_timed_idea = { idea = BUL_railway_plan days = 730 }
+		48 = {
+				add_building_construction = {
+				  type = infrastructure
+				  level = 2
+				  instant_build = yes
+			  }
+		  }
+    }
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PAN_expand_chromium_production
+		icon = GFX_goal_generic_chromium
+		prerequisite = { focus = PAN_post_depression_economic_recovery }
+		relative_position_id = PAN_post_depression_economic_recovery
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 50
+		}
+
+
+
+		completion_reward = {
+		  212 = {
+			  add_extra_state_shared_building_slots = 2
+			  add_building_construction = {
+				  type = industrial_complex
+				  level = 2
+				  instant_build = yes
+			  }
+			}
+		  add_resource = {
+			  type = chromium
+			  amount = 16
+			  state = 212
+		  }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CHROMIUM}
+	}
+
+	focus = {
+		id = PAN_expand_the_chelopech_gold_deposit
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = PAN_expand_chromium_production }
+		relative_position_id = PAN_expand_chromium_production
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 55
+		}
+
+
+
+		completion_reward = {
+		  add_ideas = BUL_chelopech_gold
+		  48 = {
+			  add_extra_state_shared_building_slots = 1
+			  add_building_construction = {
+				  type = industrial_complex
+				  level = 1
+				  instant_build = yes
+			  }
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PAN_technological_advancement
+		icon = GFX_focus_research
+		prerequisite = { focus = PAN_expand_chromium_production }
+		prerequisite = { focus = PAN_two_year_railway_plan }
+		relative_position_id = PAN_expand_chromium_production
+		x = -1
+		y = 1
+		cost = 7.15
+
+		ai_will_do = {
+			factor = 55
+		}
+
+		available = {
+	  	num_of_factories > 24
+		}
+
+		completion_reward = {
+      add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = PAN_build_coal_power_plants
+		icon = GFX_goal_power_plant
+		prerequisite = { focus = PAN_two_year_railway_plan }
+		relative_position_id = PAN_two_year_railway_plan
+		x = -1
+		y = 1
+		cost = 7.15
+
+		ai_will_do = {
+			factor = 40
+		}
+
+
+
+		completion_reward = {
+		  add_tech_bonus = {
+			  name = BUL_build_coal_power_plants
+			  bonus = 1
+			  uses = 1
+			  category = industry
+				category = electronics
+		  }
+		random_owned_controlled_state = {
+		  add_extra_state_shared_building_slots = 2
+		  add_building_construction = {
+			  type = industrial_complex
+			  level = 2
+			  instant_build = yes
+		  }
+		}
+	}
+	search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+    }
+
+	focus = {
+		id = PAN_mobilize_natural_resources
+		icon = GFX_goal_excavation
+		prerequisite = { focus = PAN_expand_the_chelopech_gold_deposit }
+		relative_position_id = PAN_build_coal_power_plants
+		x = 3
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		available = {
+		  OR = {
+			  has_war = yes
+        threat > 0.10
+			}
+		}
+
+		completion_reward = {
+      add_ideas = PAN_mobilized_resources
+			add_tech_bonus = {
+				name = PAN_mobilize_natural_resources
+				bonus = 1
+				uses = 2
+				category = excavation_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+	}
+
+	focus = {
+		id = PAN_liquify_coal
+		icon = GFX_goal_refining
+		prerequisite = { focus = PAN_build_coal_power_plants }
+		relative_position_id = PAN_expand_the_chelopech_gold_deposit
+		x = -3
+		y = 1
+		cost = 7.15
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		completion_reward = {
+		  add_tech_bonus = {
+			  name = PAN_liquify_coal
+			  bonus = 1
+			  uses = 1
+			  category = synth_resources
+		  }
+		  random_owned_controlled_state = {
+		  add_extra_state_shared_building_slots = 1
+		  add_building_construction = {
+			  type = synthetic_refinery
+			  level = 1
+			  instant_build = yes
+		    }
+		}
+	}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_OIL }
+    }
+
+	focus = {
+		id = PAN_housing_expansion_plan
+		icon = GFX_goal_generic_housing
+		prerequisite = { focus = PAN_liquify_coal }
+		prerequisite = { focus = PAN_mobilize_natural_resources }
+		relative_position_id = PAN_mobilize_natural_resources
+		x = -1
+		y = 1
+		cost = 14.3
+
+		ai_will_do = {
+			factor = 60
+		}
+
+		completion_reward = {
+      48 = {
+			 add_extra_state_shared_building_slots = 3
+			}
+			211 = {
+			 add_extra_state_shared_building_slots = 3
+			}
+			212 = {
+			 add_extra_state_shared_building_slots = 3
+			}
+			if = {
+			limit = { has_full_control_of_state = 77 }
+				77 = {
+				 add_extra_state_shared_building_slots = 3
+				}
+			}
+			if = {
+				limit = { has_full_control_of_state = 183 }
+				183 = {
+				 add_extra_state_shared_building_slots = 3
+				}
+			}
+	  }
+	  search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = PAN_kickstart_ammunition_production
+		icon = GFX_goal_ammunitions
+		prerequisite = { focus = PAN_industrial_modernization }
+		relative_position_id = PAN_industrial_modernization
+		x = 3
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+		  NOT = {
+			  has_idea = PAN_great_depression3
+			}
+		}
+
+		  completion_reward = {
+		  random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				  level = 1
+				  instant_build = yes
+			  }
+		  }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+    }
+
+	focus = {
+		id = PAN_heavy_war_industry_expansion
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = PAN_kickstart_ammunition_production }
+		relative_position_id = PAN_kickstart_ammunition_production
+		x = -1
+		y = 1
+		cost = 7.15
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		  completion_reward = {
+		  random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				  type = arms_factory
+				  level = 2
+				  instant_build = yes
+			  }
+		  }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+    }
+
+	focus = {
+		id = PAN_artillery_pieces_production
+		icon = GFX_goal_proving_grounds
+		prerequisite = { focus = PAN_kickstart_ammunition_production }
+		relative_position_id = PAN_kickstart_ammunition_production
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		  completion_reward = {
+			add_ideas = PAN_artillery_production
+			add_tech_bonus = {
+				name = PAN_artillery_pieces_production
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				  level = 1
+				  instant_build = yes
+			  }
+		  }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+    }
+
+	focus = {
+		id = PAN_ministries_coop
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = PAN_heavy_war_industry_expansion }
+		relative_position_id = PAN_heavy_war_industry_expansion
+		x = -1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		completion_reward = {
+	   	add_timed_idea = { idea = PAN_ministries_cooperation days = 240 }
+		}
+    }
+
+	focus = {
+		id = PAN_finalize_rearmament_plans
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = PAN_heavy_war_industry_expansion }
+		prerequisite = { focus = PAN_artillery_pieces_production }
+		relative_position_id = PAN_heavy_war_industry_expansion
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 45
+		}
+
+		available = {
+			has_idea = PAN_kickstarted_military_industry
+		}
+
+		  completion_reward = {
+			swap_ideas = { remove_idea = PAN_kickstarted_military_industry add_idea = PAN_efficient_military_industry }
+		  random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				  level = 1
+				  instant_build = yes
+			  }
+		  }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+    }
+
+	focus = {
+		id = PAN_industrial_centralization
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = PAN_artillery_pieces_production }
+		relative_position_id = PAN_artillery_pieces_production
+		x = 1
+		y = 1
+		cost = 5
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available = {
+			OR = {
+				has_idea = PAN_developing_military_industry	
+				has_idea = PAN_efficient_military_industry
+			}
+		}
+
+		  completion_reward = {
+			add_tech_bonus = {
+				name = PAN_industrial_centralization
+				bonus = 1
+				uses = 1
+				category = concentrated_industry_category
+			}
+		  random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				  level = 1
+				  instant_build = yes
+			  }
+		  }
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
+    }
+
+	focus = {
+		id = PAN_fill_the_supply_gaps
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = PAN_ministries_coop }
+		prerequisite = { focus = PAN_finalize_rearmament_plans }
+		relative_position_id = PAN_ministries_coop
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				  level = 1
+				  instant_build = yes
+			  }
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+		  }
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				  level = 1
+				  instant_build = yes
+			  }
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+		  }
+		  random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = arms_factory
+				  level = 1
+				  instant_build = yes
+			  }
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+		  }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+    }
+
+		focus = {
+		id = PAN_repurpose_abandoned_facilities
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = PAN_industrial_centralization }
+		prerequisite = { focus = PAN_finalize_rearmament_plans }
+		relative_position_id = PAN_fill_the_supply_gaps
+		x = 2
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				  type = industrial_complex
+				  level = 1
+				  instant_build = yes
+			  }
+				add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+				}
+		  }
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				  type = arms_factory
+				  level = 1
+				  instant_build = yes
+			  }
+				add_building_construction = {
+				  type = arms_factory
+				  level = 1
+				  instant_build = yes
+			  }
+		  }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+    }
+
+	focus = {
+		id = PAN_post_rearmament_military_plans
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = PAN_repurpose_abandoned_facilities }
+		prerequisite = { focus = PAN_fill_the_supply_gaps }
+		relative_position_id = PAN_fill_the_supply_gaps
+		x = 1
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 44
+		}
+
+		completion_reward = {
+		  add_ideas = PAN_post_rearmament_military_plans_idea
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+				  type = industrial_complex
+				  level = 1
+				  instant_build = yes
+			  }
+		  }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+    }
+
+	focus = {
+		id = PAN_the_prosperity_plan
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = PAN_post_rearmament_military_plans }
+		prerequisite = { focus = PAN_housing_expansion_plan }
+		relative_position_id = PAN_post_rearmament_military_plans
+		x = -3
+		y = 1
+		cost = 10
+
+		ai_will_do = {
+			factor = 55
+		}
+
+		completion_reward = {
+		  add_ideas = PAN_prosper_plan
+			random_owned_controlled_state = {
+		    add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+				  type = industrial_complex
+				  level = 2
+				  instant_build = yes
+			  }
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+		  }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+  	}
+
+	focus = {
+		id = PAN_new_page_in_technological_research
+		icon = GFX_focus_research
+		prerequisite = { focus = PAN_the_prosperity_plan }
+		relative_position_id = PAN_the_prosperity_plan
+		x = 0
+		y = 1
+		cost = 7.15
+
+		ai_will_do = {
+			factor = 55
+		}
+
+		available = {
+			num_of_factories > 54
+			has_completed_focus = PAN_technological_advancement
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	
+	### POLITICAL PATH BEGINNING ###
 	focus = {
 		id = PAN_legacy_of_harmido_arias_madrid
 		available = {
@@ -36,7 +712,7 @@ focus_tree = {
 		}
 		#relative_position_id = PAR_fedrerista_land_reforms 
 		icon = GFX_focus_generic_befriend_usa
-		x = 44
+		x = 58
 		y = 0
 		# mutually_exclusive = { focus = PAR_fedrerista_land_reforms }
 		cost = 1
@@ -1345,7 +2021,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	###focus = {
 		id = PAN_the_end_of_imperialism
 		available = {
 			if = {
@@ -1756,5 +2432,7 @@ focus_tree = {
 			
 		}
 	}
+
+
 }
 
