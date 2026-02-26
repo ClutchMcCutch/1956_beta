@@ -26,6 +26,8 @@
  PAN_no_standing_army_desc:0 "The Panamanian constitution prohibits the maintenance of a standing army. National defense is entrusted to internal security forces and foreign guarantees, leaving the republic vulnerable but politically stable."
  PAN_economic_recovery:0 "Economic Recovery"
  PAN_economic_recovery_desc:0 "The worst of the crisis has passed, but the scars remain. Industry is slowly regaining its footing, trade is stabilizing, and cautious optimism replaces despair. Still, growth is fragile, and without careful management recovery could easily stall."
+ PAN_banana_influence:0 "Banana Influence"
+ PAN_banana_influence_desc:0 "The United Fruit Company and other American corporations have a slight presence in Panama, holding influence over key sectors of the economy and exerting influence over politics. This relationship provides economic benefits but also fosters resentment among those who see it as a form of neocolonialism and American interference."
 
 ###Opinion Modifiers###
   american_distrust:0 "Distrust of the United States"

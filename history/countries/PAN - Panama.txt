@@ -19,6 +19,7 @@ add_ideas = { # Military abolished in 1904, National Police maintained as main c
 	disarmed_nation
 	PAN_no_standing_army
 	PAN_economic_recovery
+	PAN_banana_influence
 }
 
 set_country_flag = monroe_doctrine

@@ -27,6 +27,19 @@ ideas = {
             factory_output_factor = -0.15
         	}
     	}
+
+        PAN_banana_influence = {
+        picture = GFX_idea_PAN_banana_influence
+
+        allowed = { always = yes }
+        visible = { always = yes }
+
+        modifier = {
+            stability_factor = -0.1
+            consumer_goods_factor = -0.05
+            political_power_factor = -0.05
+        	}
+    	}
 	}
 
 }
